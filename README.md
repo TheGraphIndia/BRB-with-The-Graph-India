@@ -162,7 +162,7 @@ To start using follow these steps:
     const QueryURL = "https://gateway.thegraph.com/api/[api-key]/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7"
     ```
 - You need an API Key to query the data. Under the Query URL you can see the option to `Manage API Keys`. Click on that and it will take you to create it. You can also create it using [this](https://thegraph.com/studio/apikeys/) link.
-- <img width="435" alt="Screenshot 2023-07-04 at 1 20 04 PM" src="https://github.com/TheGraphIndia/Graph-A-Thon/assets/47234407/81f2507f-c1fe-4eaa-a1c4-44386746502e"/>
+![Screenshot](https://github.com/TheGraphIndia/Graph-A-Thon/raw/main/assets/47234407/81f2507f-c1fe-4eaa-a1c4-44386746502e.png)
 
 - Click on `Create API Key` and enter a name eg. graphathon-uniswap.
 - You get 1,000 free queries for the API key. Enter your email address and claim your queries.
