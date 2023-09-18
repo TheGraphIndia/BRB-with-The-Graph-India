@@ -4,7 +4,7 @@ gm gm gm!!!
 
 This repo is your starting point to work on The Graph during BRB.
 
-This repo contains step-by-step instruction on building a subgraph and using it's endpoint to showcase the data. 
+This repo contains step-by-step instructions on building a subgraph and using it's endpoint to showcase the data. 
 
 So, LFG🚀
 
@@ -97,7 +97,7 @@ Deploy a simple smart contract on the Polygon Mumbai testnet and deploy a subgra
 - Play around with your contract. Transfer some ETH / MATIC or change your name or Twitter username using the Remix IDE.
 
 
-> Congrat's you have created and deployed your subgraph endpoint.
+> Congrats!!! You have created and deployed your subgraph endpoint.
 
 
 --- 
@@ -153,32 +153,32 @@ To start using follow these steps:
   export default App;
   ```
 
-- We are going to make use of the Uniswap subgraph for this challenge. See it [here](https://thegraph.com/explorer/subgraphs/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7?view=Overview&chain=mainnet).
+- We are going to make use of the deployed subgraph for this. See it on your dashboard.
   
 - Click on `Query` button on the right and copy the Query URL to access the subgraph.
 
 - Go back to our `App.jsx` and store the URL in a variable inside the App function.
     ```javascript
-    const QueryURL = "https://gateway.thegraph.com/api/[api-key]/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7"
+    const QueryURL = "https://api.studio.thegraph.com/query/39471/BRBwithGraph/version/latest"
     ```
 - You need an API Key to query the data. Under the Query URL you can see the option to `Manage API Keys`. Click on that and it will take you to create it. You can also create it using [this](https://thegraph.com/studio/apikeys/) link.
 ![Screenshot](https://github.com/TheGraphIndia/Graph-A-Thon/raw/main/assets/47234407/81f2507f-c1fe-4eaa-a1c4-44386746502e.png)
 
-- Click on `Create API Key` and enter a name eg. graphathon-uniswap.
+- Click on `Create API Key`.
 - You get 1,000 free queries for the API key. Enter your email address and claim your queries.
 - Copy the generated API key and paste it into our query URL.
 
 - Add the data you want to query below the `QueryURL` variable. Here we will get the data about the first 5 token details of Uniswap.
     ```javascript
     const query = `{
-    tokens(first: 5) {
-    id
-    name
-    symbol
-    decimals
-    }
-    }`
-    ```
+      changeNameEvents(first: 5) {
+        id
+        name
+        blockNumber
+        blockTimestamp
+      }
+   }`
+```
 
 - Create a client to access Uniswap. We will make of `urql` for this. Add the following import statement at the top
     ```javascript
@@ -194,17 +194,17 @@ To start using follow these steps:
 
 - We will make use of useEffect and useState to track the state. Add the following code in the App function
     ```javascript
-    const [tokens, setTokens] = useState([]);
+    const [names, setNames] = useState([]);
     ```
 
     ```javascript
     useEffect(() => {
-      const getTokens = async () => {
+      const getNames = async () => {
         const { data } = await client.query(query).toPromise();
         console.log(data);
-        setTokens(data.tokens);
+        setNames(data.names);
       }
-      getTokens();
+      getNames();
     }, [])
     ```
 
@@ -213,12 +213,12 @@ To start using follow these steps:
     return (
     <>
       <div>
-        <h1>Tokens Information</h1>
-        {tokens !== null && tokens.length > 0 && tokens.map((token) => {
+        <h1>Information</h1>
+        {names !== null && names.length > 0 && names.map((name) => {
           return (
-            <div key={token.id}>
-              <div>{token.id}</div>
-              <div>{token.name}</div>
+            <div key={name.id}>
+              <div>{name.id}</div>
+              <div>{name.name}</div>
             </div>
           );
         })}
@@ -234,46 +234,47 @@ To start using follow these steps:
     import './App.css';
 
     function App() {
-    const [tokens, setTokens] = useState([]);
+    const [names, setNames] = useState([]);
 
-    const QueryURL = "https://gateway.thegraph.com/api/[api-key]/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7";
+    const QueryURL = "https://api.studio.thegraph.com/query/39471/BRBwithGraph/version/latest";
 
     const client = createClient({
     url: QueryURL
     });
 
     const query = `{
-    tokens(first: 5) {
-      id
-      name
-      symbol
-      decimals
-    }
-    }`
+      changeNameEvents(first: 5) {
+        id
+        name
+        blockNumber
+        blockTimestamp
+      }
+   }`
 
     useEffect(() => {
-    const getTokens = async () => {
-      const { data } = await client.query(query).toPromise();
-      setTokens(data.tokens);
-    };
-    getTokens();
-    }, []);
+      const getNames = async () => {
+        const { data } = await client.query(query).toPromise();
+        console.log(data);
+        setNames(data.names);
+      }
+      getNames();
+    }, [])
 
     return (
     <>
       <div>
-        <h1>Tokens Information</h1>
-        {tokens !== null && tokens.length > 0 && tokens.map((token) => {
+        <h1>Information</h1>
+        {names !== null && names.length > 0 && names.map((name) => {
           return (
-            <div key={token.id}>
-              <div>{token.id}</div>
-              <div>{token.name}</div>
+            <div key={name.id}>
+              <div>{name.id}</div>
+              <div>{name.name}</div>
             </div>
           );
         })}
       </div>
     </>
-    );
+  );
     }
 
     export default App;
@@ -284,7 +285,3 @@ To start using follow these steps:
 - Make use of The Graph Playground in the dashboard to use different queries and display that data. (SKY IS THE LIMIT 🌌)
 
 > Wohooo! You did it. 🥳 Congratulationssss! Share it with the world.
-
-
-
-
