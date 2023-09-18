@@ -2,7 +2,7 @@
 
 gm gm gm!!!
 
-This repo is your starting point to work on The Graph Protocol during BRB.
+This repo is your starting point to work on The Graph during BRB.
 
 This repo contains step-by-step instruction on building a subgraph and using it's endpoint to showcase the data. 
 
