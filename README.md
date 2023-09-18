@@ -18,7 +18,7 @@ Deploy a simple smart contract on the Polygon Mumbai testnet and deploy a subgra
 
 ### BUIDLing!!!
 
-- Open [Remix IDE](https://remix.ethereum.org/). Create a Solidity file `Graphathon.sol` and paste the following code.
+- Open [Remix IDE](https://remix.ethereum.org/). Create a Solidity file `BRBwithGraph.sol` and paste the following code.
 
     ```solidity
     //SPDX-License-Identifier: MIT
