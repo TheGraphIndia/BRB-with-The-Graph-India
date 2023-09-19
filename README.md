@@ -178,7 +178,7 @@ To start using follow these steps:
         blockTimestamp
       }
    }`
-```
+    ```
 
 - Create a client to access Uniswap. We will make of `urql` for this. Add the following import statement at the top
     ```javascript
