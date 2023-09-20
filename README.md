@@ -285,3 +285,7 @@ To start using follow these steps:
 - Make use of The Graph Playground in the dashboard to use different queries and display that data. (SKY IS THE LIMIT 🌌)
 
 > Wohooo! You did it. 🥳 Congratulationssss! Share it with the world.
+
+---
+
+FOR ANY QUERIES JOIN THE 👉🏻[TELEGRAM GROUP](https://t.me/TheGraph_India)https://t.me/TheGraph_India👈🏻
