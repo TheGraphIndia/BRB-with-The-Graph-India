@@ -288,4 +288,4 @@ To start using follow these steps:
 
 ---
 
-FOR ANY QUERIES JOIN THE 👉🏻[TELEGRAM GROUP](https://t.me/TheGraph_India)https://t.me/TheGraph_India👈🏻
+FOR ANY QUERIES JOIN THE 👉🏻[TELEGRAM GROUP](https://t.me/TheGraph_India)👈🏻
