@@ -282,7 +282,7 @@ To start using follow these steps:
 
 - Run `npm run dev` to view the frontend.
 
-- Make use of The Graph Playground in the dashboard to use different queries and display that data. (SKY IS THE LIMIT 🌌)
+- Make use of The Graph Playground in the dashboard to use different queries and display that data.= (SKY IS THE LIMIT 🌌)
 
 > Wohooo! You did it. 🥳 Congratulationssss! Share it with the world.
 
