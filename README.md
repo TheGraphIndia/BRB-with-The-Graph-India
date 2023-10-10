@@ -1,4 +1,4 @@
-# Push Protocol's BRB with The Graph Protocol
+# Push Protocol's BRB with The Graph
 
 gm gm gm!!!
 
